@@ -15,7 +15,7 @@ class CreateKasirsTable extends Migration
     {
         Schema::create('kasirs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->sting('nama');
+            $table->string('nama');
             $table->text('alamat');
             $table->integer('telepon');
             $table->string('status');
