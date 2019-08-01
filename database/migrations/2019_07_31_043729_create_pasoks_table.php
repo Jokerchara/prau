@@ -15,10 +15,12 @@ class CreatePasoksTable extends Migration
     {
         Schema::create('pasoks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigIncrements('distributors');
-            $table->bigIncrements('bukus');
+            $table->unsignedBigInteger('id_distributor');
+            $table->foreign('id_distributor')->references('id')->on('distributors')->ondelete('cascade');
+            $table->unsignedBigInteger('id_buku');
+            $table->foreign('id_buku')->references('id')->on('bukus')->ondelete('cascade');
             $table->integer('jumlah');
-            $table->integer('tanggal');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }
