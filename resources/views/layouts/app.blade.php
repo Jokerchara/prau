@@ -37,13 +37,16 @@
                         <span>Login DULU DUDEEEEEEE</span>
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('Menu1') }}</a>
+                            <a class="nav-link" href="#">{{ __('Menu Super Admin') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('Menu2') }}</a>
+                            <a class="nav-link" href="#">{{ __('Menu Admin') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('Menu3') }}</a>
+                            <a class="nav-link" href="#">{{ __('Menu User') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{{ __('Menu Global User') }}</a>
                         </li>
                         @endguest
                     </ul>
