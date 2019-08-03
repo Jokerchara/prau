@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(
-    ['prefix' => 'admin', 'middlewae' => ['auth']],
+    ['prefix' => 'admin', 'middlewae' => ['auth','role:admin']],
     function () {
         Route::get('/',function (){
             return view('admin.index');

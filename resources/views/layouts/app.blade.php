@@ -36,6 +36,7 @@
                         @guest
                         <span>Login DULU DUDEEEEEEE</span>
                         @else
+                        @role('admin')
                         <li class="nav-item">
                             <a class="nav-link" href="#">{{ __('Menu Super Admin') }}</a>
                         </li>
@@ -48,6 +49,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">{{ __('Menu Global User') }}</a>
                         </li>
+                        @endrole
                         @endguest
                     </ul>
 

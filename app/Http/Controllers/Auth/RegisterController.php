@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.
@@ -68,5 +68,10 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        // Mengambil data role yang mempunyai name 'member'
+        $memberRole = Role::where('name','member')->first();
+        //Melampirkan role member kepada user
+        $user->attachRole($memberRole);
+        return $user;
     }
 }
