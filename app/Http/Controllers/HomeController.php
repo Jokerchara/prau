@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\Role;
 use Illuminate\Http\Request;
 use Laratrust\LaratrustFacade as Laratrust;
 
@@ -28,7 +26,7 @@ class HomeController extends Controller
     {
         if (Laratrust::hasRole('admin'))return $this->adminDashboard();
         if (Laratrust::hasRole('member'))return $this->memberDashboard();
-        return view('home');
+        return view('admin.index');
     }
     protected function adminDashboard()
     {
